@@ -1,4 +1,5 @@
 psutil>=5.9
 ping3>=4.0
 wmi>=1.5.1
+colorama>=0.4
 

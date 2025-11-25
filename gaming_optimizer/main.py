@@ -40,7 +40,11 @@ class GamingOptimizer:
 
     def collect_performance_metrics(self, network_results: Optional[Dict[str, NetworkResult]] = None) -> Dict[str, float]:
         fps_score = self._synthetic_benchmark()
-        latency = statistics.mean([res.average for res in network_results.values()]) if network_results else 0.0
+        if network_results:
+            valid_latencies = [res.average for res in network_results.values() if res.has_data]
+            latency = statistics.mean(valid_latencies) if valid_latencies else 0.0
+        else:
+            latency = 0.0
         return {"fps": fps_score, "latency": latency}
 
     # ---------- Commandes ----------

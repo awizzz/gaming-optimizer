@@ -8,12 +8,13 @@ Outil en ligne de commande pour Windows 10/11 qui mesure et optimise automatiqu
 - **Optimisations GPU** : détection NVIDIA/AMD/Intel, ajustements rapides via `nvidia-smi`, recommandations AMD/Intel, monitoring température via WMI/OpenHardwareMonitor.
 - **Backups & restauration** : instantané automatique AVANT chaque changement (`storage/system_backup.json`) et commande `restore` pour revenir à l’état initial.
 - **Monitoring temps réel** : suivi du ping vers 1.1.1.1, CPU/RAM et capteurs GPU.
+- **Menu interactif stylisé** : interface colorée (Colorama) avec logo ASCII, navigation fluide et rappels contextuels.
 - **Rapports** : chaque analyse/optimisation produit un rapport texte horodaté dans `reports/` + journal JSON dans `reports/network_reports.json`.
 
 ## Prérequis
 - Windows 10/11 (64 bits) avec droits administrateur.
 - Python 3.8+ installé (ou exécutable PyInstaller).
-- Modules Python : `psutil`, `ping3`, `wmi` (voir `requirements.txt`).
+- Modules Python : `psutil`, `ping3`, `wmi`, `colorama` (voir `requirements.txt`).
 - `OpenHardwareMonitor` facultatif pour les capteurs GPU via WMI.
 
 ## Installation rapide
