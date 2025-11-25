@@ -1,0 +1,19 @@
+[project]
+name = "gaming-optimizer"
+version = "1.0.0"
+description = "CLI Windows pour analyser et optimiser les performances gaming."
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "psutil>=5.9",
+    "ping3>=4.0",
+    "wmi>=1.5.1",
+]
+
+[project.scripts]
+gaming-optimizer = "gaming_optimizer.cli:main"
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
